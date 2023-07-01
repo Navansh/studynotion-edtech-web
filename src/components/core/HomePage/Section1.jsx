@@ -70,6 +70,37 @@ const Section1 = () => {
 
           ></Codeblocks>
         </div>
+
+        <div>
+        <Codeblocks
+            position={"lg:flex-row-reverse"}
+            heading={
+              <div className=' text-4xl font-bold'>
+               Start <HighlightTextBlue text={"coding in seconds"}/>
+              </div>
+            }
+            subheading={"Go ahead, give it a try. Our hands-on learning environment means you'll be writing real code from your very first lesson."}
+            ctabtn1={
+              {
+                btnText : "Continue Lesson",
+                active : true,
+                linkto : "/signup"
+              }
+            }
+            ctabtn2={
+              {
+                btnText : "Learn More",
+                active : false,
+                linkto : "/login"
+              }
+            }
+            codeblock={`<!DOCTYPE html>\n<html><head><title>Example</title><linkrel="stylesheet"href="styles.css">\n</head>\n<body>\n<h1><a href="/">Header</a>\n</h1>\n<nav><a href="one/">One</a><a href="two/">Two</a><ahref="three/">Three</a>\n</nav>`}
+            backgroundGradient={"bg-gradient-to-br from-purple-600 via-amber-500 to-slate-50"}
+            codeColor={"text-yellow-25"}
+            
+
+          ></Codeblocks>
+        </div>
     </div>
   )
 }

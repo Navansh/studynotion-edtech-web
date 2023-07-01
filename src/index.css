@@ -27,3 +27,6 @@
     box-shadow: 20px 20px 0px 0px #F5F5F5;
     /* display: none; */
 }
+.boxshadowtimeline {
+    box-shadow: 20px 20px 0px 0px #FFF;
+}
