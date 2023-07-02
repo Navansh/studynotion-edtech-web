@@ -132,7 +132,8 @@ const Section2 = () => {
                 </div>
             </div>
 
-            <div className=' flex flex-col gap-5 mt-24'>
+            {/* Testimonial Section  */}
+            <div className=' flex flex-col gap-5 py-24 items-center'>
                 <div className=' text-4xl font-semibold text-center '>
                     Your swiss knife for <HighlightTextBlue text={"learning any language"}></HighlightTextBlue>
                 </div>
@@ -145,6 +146,11 @@ const Section2 = () => {
                     <img src={Compare_with_others} alt="" className=' object-contain lg:-mb-10 lg:-mt-0 -mt-12' />
                     <img src={Plan_your_lessons} alt="" className=' object-contain lg:-ml-36 lg:-mt-5 -mt-16'/>
                 </div>
+
+                <div className=' w-fit'>
+                    <CTAbutton active={true} linkto={"/signup"}>Learn More</CTAbutton>
+                </div>
+
 
             </div>
         </div>

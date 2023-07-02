@@ -1,10 +1,38 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import {FaArrowRight} from 'react-icons/fa'
 import HighlightTextBlue from './HighlightTextBlue'
 import CTAbutton from './CTAbutton'
 import Codeblocks from './Codeblocks'
+import {HomePageExplore} from '../../../data/homepage-explore.js'
 const Section1 = () => {
+
+  const tabsName = [
+    "Free",
+    "New to Coding",
+    "Most Popular",
+    "Skills Paths",
+    "Career Paths",
+  ];
+
+  const [currentTab, setCurrentTab] = React.useState(tabsName[0]);
+  const [courses, setCourses] = useState(HomePageExplore[0].courses);
+  const [currentCard, setCurrentCard] = useState(HomePageExplore[0].courses[1].heading);
+
+  const setMyCard = (card) => {
+    setCurrentCard(card);
+  };
+
+  const setMyTab = (tab) => {
+    setCurrentTab(tab);
+    HomePageExplore.map((item) => {
+      if (item.tag === tab) {
+        setCourses(item.courses);
+        setCurrentCard(item.courses[1].heading);
+      }
+    });
+  };
+
   return (
     <div className=' relative mx-auto max-w-maxContent flex flex-col w-11/12 items-center text-white justify-between'>
         <Link to = {"/signup"}>
@@ -100,6 +128,36 @@ const Section1 = () => {
             
 
           ></Codeblocks>
+        </div>
+
+        <div>
+            <div className=' text-4xl font-semibold text-center'>
+              Unlock the <HighlightTextBlue text={"Power of Code"}/>
+            </div>
+
+            <p className=' text-center text-richblack-300 text-lg font-semibold mt-3'>Learn to build anything you can Imagine</p>
+
+            <div>
+              {
+                tabsName.map((tab) => {
+                  return (
+                    <div
+                      key={tab}
+                      onClick={() => setMyTab(tab)}
+                      className={`${
+                        currentTab === tab ? "text-richblack-100" : "text-richblack-300"
+                      } cursor-pointer text-lg font-semibold mt-3`}
+                    >
+                      {tab}
+                    </div>
+                  );
+                }
+                )
+
+                
+
+              }
+            </div>
         </div>
     </div>
   )
