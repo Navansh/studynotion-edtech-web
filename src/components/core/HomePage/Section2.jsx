@@ -47,7 +47,7 @@ const Section2 = () => {
   return (
     <div className=' bg-pure-greys-5 text-richblack-700'>
         <div className=' homepage_bg h-[320px]' >
-            <div className=' w-11/12 max-w-maxContent h-full flex flex-row items-center justify-center mx-auto gap-5'>
+            <div className=' w-11/12 max-w-maxContent h-full pt-[150px] flex flex-row items-center justify-center mx-auto gap-5'>
                 <CTAbutton active={true} linkto={"/signup"}>
                     <div className=' flex flex-row gap-2 items-center'>
                         Explore Full Catalog 
