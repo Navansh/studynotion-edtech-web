@@ -22,17 +22,27 @@ const Section1 = () => {
 
 
 
-  const setMyTab = (tab) => {
-    setCurrentTab(tab);
-    HomePageExplore.map((item) => {
-      if (item.tag === tab) {
-        setCourses(item.courses);
-        console.log(item.courses);
-        setCurrentCard(item.courses[1].heading);
-        console.log(item.courses[1].heading);
-      }
-      return null;
-    });
+  // const setMyTab = (tab) => {
+  //   setCurrentTab(tab);
+  //   HomePageExplore.map((item) => {
+  //     if (item.tag === tab) {
+  //       setCourses(item.courses);
+  //       console.log(item.courses);
+  //       setCurrentCard(item.courses[1].heading);
+  //       console.log(item.courses[1].heading);
+  //     }
+  //     return null;
+  //   });
+  // };
+
+  const setMyCards = (value) => {
+    setCurrentTab(value);
+    console.log(value)
+    const result = HomePageExplore.filter((course) => course.tag === value);
+    setCourses(result[0].courses);
+    console.log(courses)
+    setCurrentCard(result[0].courses[1].heading);
+    console.log(result[0]);
   };
 
   return (
@@ -145,7 +155,7 @@ const Section1 = () => {
                   return (
                     <div
                       key={tab}
-                      onClick={() => setMyTab(tab)}
+                      onClick={() => setMyCards(tab)}
                       className={`${
                         currentTab === tab ? "text-richblack-5  font-medium bg-richblack-900" : "text-richblack-200"
                       } cursor-pointer rounded-full text-[16px] px-5 py-2 transition-all duration-200 hover:bg-richblack-900 hover:text-richblack-5`}

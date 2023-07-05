@@ -23,7 +23,7 @@ export const HomePageExplore = [
         ]
     },
     {
-        tag: 'New to coding',
+        tag: 'New to Coding',
         courses : [
             {
                 heading : "HTML",
@@ -46,7 +46,7 @@ export const HomePageExplore = [
         ]
     },
     {
-        tag: 'Most popular',
+        tag: 'Most Popular',
         courses : [
             {
                 heading : "Java",
@@ -69,7 +69,7 @@ export const HomePageExplore = [
         ]
     },
     {
-        tag: 'Skills paths',
+        tag: 'Skills Paths',
         courses : [
             {
                 heading : "Flask",
@@ -92,7 +92,7 @@ export const HomePageExplore = [
         ]
     },
     {
-        tag: 'Career paths',
+        tag: 'Career Paths',
         courses : [
             {
                 heading : "Next.js",

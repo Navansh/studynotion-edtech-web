@@ -8,6 +8,10 @@ const CourseProgress = require('../models/CourseProgress');
 const Course = require('../models/Course');
 const { response } = require('express');
 require('dotenv').config();
+const mailSender = require('../utils/mailSender');
+const { passwordUpdated } = require("../mail/templates/passwordUpdate");
+
+// const passwordUpdated = require('../utils/passwordUpdated');
 
 //sendOTP
 exports.sendOTP = async (req, res) => {
