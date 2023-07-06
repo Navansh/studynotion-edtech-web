@@ -33,6 +33,7 @@ export function sendOtp(email, navigate) {
 
       toast.success("OTP Sent Successfully")
       navigate("/verify-email")
+
     } catch (error) {
       console.log("SENDOTP API ERROR............", error)
       toast.error("Could Not Send OTP")
@@ -118,6 +119,7 @@ export function login(email, password, navigate) {
 
 export function getPasswordResetToken(email, setEmailSent) {
   return async (dispatch) => {
+    //backend call hai ye, hence async function
     const toastId = toast.loading("Loading...")
     dispatch(setLoading(true))
     try {
