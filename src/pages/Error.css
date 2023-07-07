@@ -12,23 +12,23 @@ body1 {
   color: var(--blue);
   font-size: 1em;
 }
-button {
+button1 {
   font-family:"Nunito Sans";
 }
-ul {
+ul1 {
   list-style-type: none;
   padding-inline-start: 35px;
 }
-svg {
+svg1 {
   width: 100%;
   visibility: hidden;
 }
-h1 {
+h1mast {
   font-size: 7.5em;
   margin: 15px 0px;
   font-weight:bold;
 }
-h2 {
+h2mast {
   font-weight:bold;
 }
 

@@ -6,6 +6,8 @@ import CTAbutton from './CTAbutton'
 import Codeblocks from './Codeblocks'
 import {HomePageExplore} from '../../../data/homepage-explore.js'
 import CourseCard from './CourseCard'
+import { AiOutlineArrowRight } from 'react-icons/ai'
+
 const Section1 = () => {
 
   const tabsName = [
@@ -51,7 +53,7 @@ const Section1 = () => {
             <div className='mx-auto box-shadow_1 p-1 mt-16 rounded-full bg-richblack-800 font-bold text-richblack-200 transition-all duration-200 hover:scale-95 w-fit group'>
                 <div className=' flex flex-row items-center gap-2 rounded-full px-10 py-[5px] group-hover:bg-richblack-900'>
                     <p>Become an Instructor</p>
-                    <FaArrowRight />
+                    <FaArrowRight></FaArrowRight>
                 </div>
             </div>
         </Link>

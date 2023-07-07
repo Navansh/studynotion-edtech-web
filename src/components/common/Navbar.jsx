@@ -13,6 +13,7 @@ const Navbar = () => {
 
     //fetching the states
     const {token} = useSelector((state) => state.auth);
+    console.log(token)
     const {user} = useSelector((state) => state.profile);
     const {totalItems} = useSelector((state) => state.cart);
     //this is taken using the slices from the redux store
@@ -99,7 +100,7 @@ const Navbar = () => {
             </nav>
 
             {/* Login, Signup, Dashboard buttons */}
-            <div className=' flex items-center gap-x-4'>
+            <div className=' flex items-center gap-x-4 '>
 
                 {
                     user && user?.accountType !== "Instructor" &&  (

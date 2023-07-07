@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux'
 import { Link, Navigate } from 'react-router-dom'
 import { useState } from 'react'
 import CTAbutton from '../components/core/HomePage/CTAbutton'
-import { FaArrowRight } from 'react-icons/fa'
+import { FaArrowLeft, FaArrowRight } from 'react-icons/fa'
 import { AiOutlineArrowLeft } from 'react-icons/ai'
 import { useDispatch } from 'react-redux'
 import { getPasswordResetToken } from '../services/operations/authAPI'
@@ -68,8 +68,8 @@ const ForgotPassword = () => {
                     </form>
 
                     <div className=' flex '>
-                        <Link to="/login" className=' w-full flex gap-1 '>
-                            <AiOutlineArrowLeft className=' text-white'></AiOutlineArrowLeft>
+                        <Link to="/login" className=' w-full flex gap-1 items-center '>
+                            <FaArrowLeft></FaArrowLeft>
                             <p>Back to Login</p>
                         </Link>
                     </div>

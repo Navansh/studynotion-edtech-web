@@ -99,13 +99,17 @@ export function login(email, password, navigate) {
       if (!response.data.success) {
         throw new Error(response.data.message)
       }
+      // console.log(response.data.data.image);
+
 
       toast.success("Login Successful")
       dispatch(setToken(response.data.token))
-      const userImage = response.data?.user?.image
-        ? response.data.user.image
-        : `https://api.dicebear.com/5.x/initials/svg?seed=${response.data.user.firstName} ${response.data.user.lastName}`
-      dispatch(setUser({ ...response.data.user, image: userImage }))
+      console.log(response.data);
+      const userImage = response.data?.data?.image
+      
+        ? response.data.data.image
+        : `https://api.dicebear.com/5.x/initials/svg?seed=${response.data.data.firstName} ${response.data.data.lastName}`
+      dispatch(setUser({ ...response.data.data, image: userImage }))
       localStorage.setItem("token", JSON.stringify(response.data.token))
       navigate("/dashboard/my-profile")
     } catch (error) {
