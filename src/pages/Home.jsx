@@ -16,6 +16,7 @@ const Home = () => {
         {/* Footer  */}
         <Footer></Footer>
     </div>
+    // this is in main 
   )
 }
 
