@@ -1,3 +1,11 @@
+#StudyNotion : An Open Source Edtech Website
+
+**Build, launch and distribute your courses with our platform**
+
+<img src='https://github.com/Navansh/studynotion-edtech-web/assets/21141664/511bbd2a-84e4-4b7e-b453-dd679f71aa2b' alt='Architecture Diagram' />
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
