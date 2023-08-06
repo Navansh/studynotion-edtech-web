@@ -57,13 +57,13 @@ Follow these steps to get started
 
 ```bash
 # Clone the repository
-git clone https://github.com/anomic30/Lern.git
+git clone https://github.com/Navansh/studynotion-edtech-web.git
 # Enter into the frontend directory
-cd Lern/client
+cd StudyNotion
 # Install the dependencies
 npm install
 # Enter into the server directory
-cd Lern/server
+cd StudyNotion/Server
 # Install the dependencies
 npm install
 ```
