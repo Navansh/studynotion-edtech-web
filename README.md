@@ -68,8 +68,8 @@ cd StudyNotion/Server
 npm install
 ```
 ### ⚠️ Important!
-In order to use this for your own purposes, you need the API keys.
-I've added a ".env.example" file that enlists all the necessary API keys required to run this app smoothly on the browser, Please make sure all those API keys are procured and filled before you start the app.
+In order to use this on a local machine you need the API keys.
+I've added a ".env.example" file that enlists all the necessary API keys required to run this app smoothly on the browser, Please make sure all those API keys are procured and filled before you start the app locally.
 
 ### Starting the application
 
