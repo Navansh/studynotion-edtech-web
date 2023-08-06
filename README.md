@@ -1,78 +1,94 @@
-#StudyNotion : An Open Source Edtech Website
+# StudyNotion : An Open Source Edtech Website
 
-**Build, launch and distribute your courses with our platform**
+<p align="center"><strong>Build, launch and distribute your courses with our transparent platform</strong></p>
 
+<video controls autoplay  src="https://github.com/Navansh/studynotion-edtech-web/assets/21141664/b6277e5e-d448-4c68-ad12-5fb43bb5c968">
+</video>
+
+
+# Introduction
+
+## About the Project
+Experience a revolutionary EdTech adventure with StudyNotion! Dive into a world of interactive learning materials, from engaging videos to gamified quizzes. Personalized journeys await, tailoring education to your strengths and dreams. Enter immersive virtual classrooms for fun collaboration, while smart assessments and progress tracking ensure continuous growth.
+
+## Our Inspiration
+At the heart of StudyNotion lies an unwavering dedication to transforming education into an exhilarating journey of discovery and empowerment. We are inspired by the boundless potential of technology to unlock new realms of learning, and we believe that every learner deserves a personalized path to success.
+
+## Tech Stack
+To build this project to life and to make it as smooth as possible for the end user, we've made this project using the most popular MERN Stack :
+<p align="center">
+  
+<!-- MongoDB -->
+  
+<a href="https://www.mongodb.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="mongodb" width="40" height="40"/> </a>
+
+<!-- Express -->
+</a> <a href="https://expressjs.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg" alt="express" width="40" height="40"/> </a>
+
+<a href="https://reactjs.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/> </a>
+
+<a href="https://nodejs.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="nodejs" width="40" height="40"/> </a> 
+
+</p>
+
+Styled using : 
+<a href="https://tailwindcss.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" alt="tailwind" width="40" height="40"/> </a>
+
+State Management : 
+<a href="https://redux.js.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg" alt="redux" width="40" height="40"/> </a>
+
+
+# Quick Start Guide
+
+To get started with having your own instance of Lern, follow these steps described in the following section.
+
+## Prerequisites
+
+You will need these to be already installed:
+
+- [NodeJS](https://nodejs.org/) 16+ and [NPM](https://npmjs.com/)
+
+And that's it
+
+## Installation
+
+Follow these steps to get started
+
+
+```bash
+# Clone the repository
+git clone https://github.com/anomic30/Lern.git
+# Enter into the frontend directory
+cd Lern/client
+# Install the dependencies
+npm install
+# Enter into the server directory
+cd Lern/server
+# Install the dependencies
+npm install
+```
+### ⚠️ Important!
+In order to use this for your own purposes, you need the API keys.
+I've added a ".env.example" file enlists all the necessary API keys, required to run this app smoothly on the browser, please make sure all that API keys are procured and filled before you start the app.
+
+### Starting the application
+
+```bash
+# To run the frontend
+npm run dev
+# To run the backend
+npm run dev
+# To build the frontend
+npm run build
+```
+
+### Run the app in the development mode.
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+## How it works
+Here's an architecture diagram to show a high level overview of the complete architecture we are using for this platform.
 <img src='https://github.com/Navansh/studynotion-edtech-web/assets/21141664/511bbd2a-84e4-4b7e-b453-dd679f71aa2b' alt='Architecture Diagram' />
 
 
-
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+#End Note
+I had super fun while building this app, and hope that you too have the same fun while using it, I am open for contributions for this app, so please drop your issues and PRs and let's make this app better together.
