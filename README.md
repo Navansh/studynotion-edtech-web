@@ -69,14 +69,12 @@ npm install
 ```
 ### ⚠️ Important!
 In order to use this for your own purposes, you need the API keys.
-I've added a ".env.example" file enlists all the necessary API keys, required to run this app smoothly on the browser, please make sure all that API keys are procured and filled before you start the app.
+I've added a ".env.example" file that enlists all the necessary API keys required to run this app smoothly on the browser, Please make sure all those API keys are procured and filled before you start the app.
 
 ### Starting the application
 
 ```bash
-# To run the frontend
-npm run dev
-# To run the backend
+# To run the backend and frontend simultaneously
 npm run dev
 # To build the frontend
 npm run build
