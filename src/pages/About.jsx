@@ -10,6 +10,7 @@ import Footer from "../components/common/Footer";
 import Quote from "../components/core/AboutPage/Quote";
 import StatsComponenet from "../components/core/AboutPage/Stats";
 import LearningGrid from "../components/core/AboutPage/LearningGrid";
+import ContactFormSection from "../components/core/AboutPage/ContactFormSection";
 const About = () => {
   return (
     <div>
@@ -112,12 +113,14 @@ const About = () => {
       <StatsComponenet />
 
       {/* Section 5  */}
-      <section className="mx-auto mt-20 flex w-11/12 max-w-maxContent flex-col justify-between gap-10 text-white">
+      <section className="mx-auto my-20 flex w-11/12 max-w-maxContent flex-col justify-between gap-10 text-white">
         <LearningGrid />
-        {/* <ContactFormSection /> */}
+        <ContactFormSection />
+
       </section>
 
       <Footer/>
+      
     </div>
   );
 };
