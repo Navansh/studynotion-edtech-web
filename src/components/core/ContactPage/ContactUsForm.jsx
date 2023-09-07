@@ -2,6 +2,8 @@ import React, { useEffect } from 'react'
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import CountryCode from '../../../data/countrycode.json'
+import { apiConnector } from "../../../services/apiConnector"
+import { contactusEndpoint } from "../../../services/apis"
 
 const ContactUsForm = () => {
 
@@ -21,6 +23,7 @@ const ContactUsForm = () => {
               lastName: "",
               message: "",
               phoneNo: "",
+              countryCode: "",
             });
         }
     },[isSubmitSuccessful,reset])
@@ -29,8 +32,12 @@ const ContactUsForm = () => {
         console.log("Form Data - ",data);
         try {
             setLoading(true);
-            // const res = await apiConnector("POST",contactusEndpoint.CONTACT_US_API,data);
-            // console.log("Email Res - ",res);
+            const res = await apiConnector(
+              "POST",
+              contactusEndpoint.CONTACT_US_API,
+              data
+            )
+            console.log("Email Res - ",res);
             setLoading(false);
         } catch (error) {
             console.log("ERROR MESSAGE - ",error.message);
@@ -100,7 +107,7 @@ const ContactUsForm = () => {
 
       {/* Phone Number with Country Code */}
       <div className="flex flex-col gap-2">
-        <label htmlFor="phonenumber" className="lable-style">
+        <label htmlFor="phonenumber" className="label-style">
           Phone Number
         </label>
 
@@ -108,15 +115,15 @@ const ContactUsForm = () => {
           <div className="flex w-[81px] flex-col gap-2">
             <select
               type="text"
-              name="firstname"
-              id="firstname"
-              placeholder="Enter first name"
+              name="dropdown"
+              id="dropdown"
               className="form-style"
-              {...register("countrycode", { required: true })}
+              {...register("countryCode", { required: true })}
             >
               {CountryCode.map((ele, i) => {
                 return (
                   <option key={i} value={ele.code}>
+                    {/* the value is the actual value that will be sent to the server through API  */}
                     {ele.code} - {ele.country}
                   </option>
                 )
@@ -126,8 +133,8 @@ const ContactUsForm = () => {
           <div className="flex w-[calc(100%-90px)] flex-col gap-2">
             <input
               type="number"
-              name="phonenumber"
-              id="phonenumber"
+              name="phoneNo"
+              id="phoneNo"
               placeholder="12345 67890"
               className="form-style"
               {...register("phoneNo", {
@@ -150,7 +157,7 @@ const ContactUsForm = () => {
 
       {/* Message */}
       <div className="flex flex-col gap-2">
-        <label htmlFor="message" className="lable-style">
+        <label htmlFor="message" className="label-style">
           Message
         </label>
         <textarea

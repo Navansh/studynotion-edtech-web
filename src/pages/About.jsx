@@ -119,6 +119,10 @@ const About = () => {
 
       </section>
 
+      <section className=" text-white m">
+        Reviews from Other Learners
+      </section>
+
       <Footer/>
       
     </div>
