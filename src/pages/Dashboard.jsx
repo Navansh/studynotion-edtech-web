@@ -2,6 +2,7 @@ import React from 'react'
 import Spinner from '../components/common/Spinner'
 import { useSelector } from "react-redux"
 import { Outlet } from "react-router-dom"
+import Sidebar from '../components/core/Dashboard/Sidebar'
 
 const Dashboard = () => {
 

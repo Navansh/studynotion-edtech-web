@@ -20,8 +20,8 @@ ul1 {
   padding-inline-start: 35px;
 }
 svg1 {
-  width: 100%;
-  visibility: hidden;
+  width: 70%;
+  height: 70%;
 }
 h1mast {
   font-size: 7.5em;
@@ -47,7 +47,7 @@ h2mast {
   margin: 5px 0px;
   &.green {
     border: 4px solid var(--green);
-    color: var(--blue);
+    color: #fff;
     &:before {
       content: "";
       position: absolute;
@@ -55,6 +55,7 @@ h2mast {
       top: 0;
       width: 0%;
       height: 100%;
+      
       background: var(--green);
       z-index: -1;
       transition: 0.2s ease;

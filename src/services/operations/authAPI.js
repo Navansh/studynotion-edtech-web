@@ -68,6 +68,8 @@ export function signUp(
       })
 
       console.log("SIGNUP API RESPONSE............", response)
+      // these are all the data received from the frontend
+      console.log(firstName, lastName, email, password, confirmPassword, otp);
 
       if (!response.data.success) {
         throw new Error(response.data.message)
@@ -109,8 +111,13 @@ export function login(email, password, navigate) {
       
         ? response.data.data.image
         : `https://api.dicebear.com/5.x/initials/svg?seed=${response.data.data.firstName} ${response.data.data.lastName}`
+
       dispatch(setUser({ ...response.data.data, image: userImage }))
+      console.log("This is user's data to be set in LocalStorage",response.data.data);
+
+      localStorage.setItem("user", JSON.stringify(response.data.data))
       localStorage.setItem("token", JSON.stringify(response.data.token))
+      
       navigate("/dashboard/my-profile")
     } catch (error) {
       console.log("LOGIN API ERROR............", error)
