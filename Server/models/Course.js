@@ -24,7 +24,6 @@ const courseSchema = new mongoose.Schema({
     courseContent : [{
         type: mongoose.Schema.Types.ObjectId,
         ref : "Section",
-        required: true,
     }],
     ratingAndReviews : [{
         type: mongoose.Schema.Types.ObjectId,
@@ -63,6 +62,7 @@ const courseSchema = new mongoose.Schema({
 		type: String,
 		enum: ["Draft", "Published"],
 	},
+    createdAt: { type: Date, default: Date.now },
          
 
 });

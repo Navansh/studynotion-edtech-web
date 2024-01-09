@@ -24,6 +24,7 @@ const Dashboard = () => {
       <Sidebar />
       <div className="h-[calc(100vh-3.5rem)] flex-1 overflow-auto">
         <div className="mx-auto w-11/12 max-w-[1000px] py-10">
+        {/* this lets us render a child component of the Dashboard component. This child component will be rendered based on the route that is matched. For example, if the route is /dashboard/my-courses, then the MyCourses component will be rendered. If the route is /dashboard/add-course, then the AddCourse component will be rendered. This is how we can render different components based on the route. */}
           <Outlet />
         </div>
       </div>

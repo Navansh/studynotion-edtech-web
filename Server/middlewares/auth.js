@@ -8,13 +8,15 @@ const Section = require('../models/Section');
 //auth
 exports.auth = async (req, res, next) => {
     try {
+        // console.log("This is the req", req.headers)
         const token = req.cookies.token || req.headers.authorization.split(' ')[1];
+        console.log("This is the token at the auth checking process", token)
 
         //if token is missing
         if (!token) {
             return res.status(401).json({
                 success: false,
-                message: 'You need to login first!',
+                message: 'You need to login first Dance!',
             });
         }
 
@@ -28,7 +30,8 @@ exports.auth = async (req, res, next) => {
         } catch (error) {
             return res.status(401).json({
                 success: false,
-                message: 'You need to login first!',
+                message: 'Token is not verifying',
+                error: error.message,
             });
         }
 
@@ -37,7 +40,8 @@ exports.auth = async (req, res, next) => {
     } catch (err) {
         return res.status(401).json({
             success: false,
-            message: 'You need to login first!',
+            message: 'Auth Failure',
+            error: err.message,
         });
     }
 };

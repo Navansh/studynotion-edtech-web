@@ -19,6 +19,10 @@ import Settings from "./components/core/Dashboard/Settings";
 import { ACCOUNT_TYPE } from "./utils/constants"
 import EnrolledCourses from "./components/core/Dashboard/EnrolledCourses";
 import { useDispatch, useSelector } from "react-redux"
+import Cart from "./components/core/Dashboard/Cart";
+import AddCourse from "./components/core/Dashboard/AddCourse";
+import MyCourses from "./components/core/Dashboard/MyCourses";
+import EditCourse from "./components/core/Dashboard/EditCourse";
 
 
 
@@ -95,18 +99,35 @@ function App() {
         >
 
         {/* //we are nesting this route inside the dashboard so as to preserve the Sidebar for every route under this route and also to make sure it is protected  */}
+          {/* Route for all users */}
           <Route path="dashboard/my-profile" element={<MyProfile />} />
           <Route path="dashboard/Settings" element={<Settings />} />
 
+          {/* Route only for Student */}
           {user?.accountType === ACCOUNT_TYPE.STUDENT && (
             <>
               <Route
                 path="dashboard/enrolled-courses"
                 element={<EnrolledCourses/>}
               />
-              {/* <Route path="/dashboard/cart" element={<Cart />} /> */}
+              <Route path="/dashboard/cart" element={<Cart />} />
             </>
           )}
+            
+            {/* Route only for Instructor */}
+          {user?.accountType === ACCOUNT_TYPE.INSTRUCTOR && (
+            <>
+              {/* <Route path="dashboard/instructor" element={<Instructor />} /> */}
+              <Route path="dashboard/my-courses" element={<MyCourses/>} />
+              <Route path="dashboard/add-course" element={<AddCourse />} />
+              <Route
+                path="dashboard/edit-course/:courseId"
+                element={<EditCourse/>}
+              />
+            </>
+          )}
+
+          
 
         </Route>
 

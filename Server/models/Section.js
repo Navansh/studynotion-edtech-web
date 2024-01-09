@@ -6,7 +6,7 @@ const sectionSchema = new mongoose.Schema({
     },
     subSections : [{
         type: mongoose.Schema.Types.ObjectId,
-        ref : "SubSection",
+        ref : "Subsection",
         required: true,
     }],
 });
