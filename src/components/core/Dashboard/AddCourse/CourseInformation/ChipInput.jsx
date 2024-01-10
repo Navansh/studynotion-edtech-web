@@ -3,6 +3,8 @@ import { useEffect, useState } from "react"
 // Importing React icon component
 import { MdClose } from "react-icons/md"
 import { useSelector } from "react-redux"
+import { toast } from "react-hot-toast";
+
 
 // Defining a functional component ChipInput
 export default function ChipInput({
@@ -29,7 +31,9 @@ export default function ChipInput({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
+  // this is actually setting the chips data
   useEffect(() => {
+    // console.log("this is the chips data", JSON.stringify(chips))
     setValue(name, chips)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [chips])
@@ -37,6 +41,7 @@ export default function ChipInput({
   // Function to handle user input when chips are added
   const handleKeyDown = (event) => {
     // Check if user presses "Enter" or ","
+    // console.log("Key Pressed")
     if (event.key === "Enter" || event.key === ",") {
       // Prevent the default behavior of the event
       event.preventDefault()
@@ -48,6 +53,8 @@ export default function ChipInput({
         const newChips = [...chips, chipValue]
         setChips(newChips)
         event.target.value = ""
+      } else {
+        toast.error("Tag already exists")
       }
     }
   }

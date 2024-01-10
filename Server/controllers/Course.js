@@ -17,9 +17,14 @@ exports.createCourse = async (req, res) => {
         //checks -> if he is an instructor
         let {courseName, courseDescription, whatYouWillLearn, price, tag, language = "English", category,instructions, status} = req.body;
 
+        console.log("These are the tags received", tag)
+
         //get thumbnail
         const thumbnail = req.files.thumbnailImage
-        console.log(thumbnail)
+        // console.log(thumbnail)
+
+        const newTag = JSON.parse(tag)
+        const newInstructions = JSON.parse(instructions)
 
         // console.log("These are all the fields", courseName, courseDescription, whatYouWillLearn, price, tag, language, category, instructions, status)
 
@@ -80,10 +85,10 @@ exports.createCourse = async (req, res) => {
             instructor : instructorDetails._id,
             whatYouWillLearn,
             price,
-            tag : tag,
+            tag : newTag,
             category: categoryDetails._id,
-			status: status,
-			instructions: instructions,
+			      status: status,
+			      instructions: newInstructions,
             language,
             thumbnail : thumbnailDetails.secure_url,
         });
