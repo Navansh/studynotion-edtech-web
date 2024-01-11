@@ -12,9 +12,9 @@ import { BiChevronDown } from "react-icons/bi";
 const Navbar = () => {
   //fetching the states
   const { token } = useSelector((state) => state.auth);
-  console.log(token);
+  // console.log(token);
   const { user } = useSelector((state) => state.profile);
-  console.log(user)
+  // console.log(user)
   const { totalItems } = useSelector((state) => state.cart);
   //this is taken using the slices from the redux store
   const location = useLocation();

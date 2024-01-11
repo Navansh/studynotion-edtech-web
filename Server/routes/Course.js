@@ -72,7 +72,7 @@ router.post("/addSubSection", auth, isInstructor, createSubSection);
 // Get All Courses
 router.get("/getAllCourses", getAllCourses);
 // Get Course Details
-router.get("/getCourseDetails", getCourseDetails);
+router.post("/getCourseDetails", getCourseDetails);
 // Get all Courses Under a Specific Instructor
 router.get("/getInstructorCourses", auth, isInstructor, getInstructorCourses)
 // Get Details for a Specific Courses
@@ -90,7 +90,7 @@ router.get("/showAllCategories", showAllCategories);
 // Create a Category, categories can only be created by Admins
 router.post("/createCategory", auth, isAdmin, createCategory);
 // Get Category Page Details
-router.post("/categoryPageDetails", categoryPageDetails);
+router.post("/getCategoryPageDetails", categoryPageDetails);
 
 // ********************************************************************************************************
 //                                      Rating routes
