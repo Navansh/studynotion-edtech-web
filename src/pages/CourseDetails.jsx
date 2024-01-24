@@ -57,6 +57,8 @@ function CourseDetails() {
 
   // // Collapse all
   // const [collapse, setCollapse] = useState("")
+  //This holds the functionality of collapsing all the accordion bars
+  //The logic is that if the collapse state is empty then all the accordion bars will be collapsed
   const [isActive, setIsActive] = useState(Array(0))
   const handleActive = (id) => {
     console.log("called", id)
@@ -66,6 +68,8 @@ function CourseDetails() {
         ? isActive.concat([id])
         : isActive.filter((e) => e != id)
     )
+    //what this is doing is that if the id is not present in the array then it will add it to the array
+    //else it will remove it from the array
   }
 
   // Total number of lectures
@@ -89,7 +93,7 @@ function CourseDetails() {
     return <Error />
   }
 
-  console.log("this is the response data", response)
+  // console.log("this is the response data", response)
 
   const {
     _id: course_id,
@@ -124,7 +128,7 @@ function CourseDetails() {
     // console.log("payment loading")
     return (
       <div className="grid min-h-[calc(100vh-3.5rem)] place-items-center">
-        <div className="spinner"></div>
+        <Spinner/>
       </div>
     )
   }
