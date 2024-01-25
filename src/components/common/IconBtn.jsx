@@ -20,6 +20,7 @@ export default function IconBtn({
           <>
             <span className={`${outline && "text-yellow-50"}`}>{text}</span>
             {children}
+            {/* This will render children if passed  */}
           </>
         ) : (
           text
